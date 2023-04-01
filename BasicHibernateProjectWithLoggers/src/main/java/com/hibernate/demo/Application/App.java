@@ -23,14 +23,9 @@ public class App
     {
         logger.info("Welcome to demo Hibernate Application ! \n");
       //Create the student object.
-    	Users user = new Users();
+        Users user = new Users(1,"Vivek","vivek@123",new Date(),"Jai",null,null);
  
-    	//Setting the object properties.
-    	user.setUserName("Vivek");
-    	user.setPassword("vivek@123");
-    	user.setCreateDate(new Date());
-    	user.setCreateUser("Jai");
- 
+		
     	Transaction tx = null;
     	//Get the session object.
     	Session session = HibernateUtil.getSessionFactory().openSession();
